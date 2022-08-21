@@ -8,7 +8,3 @@ class Human(Player):
         print("Select an gesture")
         print('Rock, Paper, Scissors, Lizard, Spock')
         self.gesture_selected = input('')
-        while users_input is not self.gestures:
-            print('Invalid option. Try again')
-            users_input = input('Please enter a gesture: ')
-        self.gesture_selected = users_input
