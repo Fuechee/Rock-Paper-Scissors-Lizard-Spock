@@ -146,3 +146,14 @@ class Game:
         elif player2wins == 2:
             print(player1wins,"/",player2wins)
             winner = True
+    
+    def display_winner(self):
+        player1wins = 0
+        player2wins = 0
+        player3wins = 0
+        if player1wins == 2:
+            print(f'{self.player1} WINS')
+        if player2wins == 2:
+            print(f'{self.player2} WINS')
+        if player3wins == 2:
+            print(f'{self.player3} WINS')
