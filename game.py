@@ -95,10 +95,54 @@ class Game:
                     print("Draw! Rematch!")
                     return 
                     
-                if  player1wins == 2:
-                    print(player1wins,"/",player3wins)
-                    winner = True
-                elif player3wins == 2:
-                    print(player1wins,"/",player3wins)
-                    winner = True
-            
+        if  player1wins == 2:
+            print(player1wins,"/",player3wins)
+            winner = True
+        elif player3wins == 2:
+            print(player1wins,"/",player3wins)
+            winner = True
+
+        play_style2 = input(" ").upper
+        if play_style2 == "Multiplayer":
+            while winner == False:
+                self.select_gesture(play_style = False)
+                if player1 == "Rock" and player2 == "Lizard" or "Scissor":
+                    print(player1)
+                    player1wins+1
+                elif player2 == "Rock" and player1 == "Lizard" or "Scissor":
+                    print(player2)
+                    player2wins+1
+                elif player1 == "Paper" and player2 == "Rock" or "Spock":
+                    print(player1)
+                    player1wins+1
+                elif player2 == "Paper" and player1 =="Rock" or "Spock":
+                    print(player2)
+                    player2wins+1
+                elif player1 == "Scissors" and player2 =="Paper" or "Lizard":
+                    print(player1)
+                    player1wins+1
+                elif player2 == "Scissors" and player1 =="Paper" or "Lizard":
+                    print(player2)
+                    player2wins+1    
+                elif player1 == "Lizard" and player2 =="Paper" or "Spock":
+                    print(player1)
+                    player1wins+1
+                elif player2 == "Lizard" and player1 =="Paper" or "Spock":
+                    print(player2)
+                    player2wins+1
+                elif player1 == "Spock" and player2 =="Rock" or "Scissors":
+                    print(player1)
+                    player1wins+1
+                elif player2 == "Spock" and player1 =="Rock" or "Scissors":
+                    print(player2)
+                    player2wins+1
+                elif player1 == player2:
+                    print("Draw! Rematch!")
+                    return 
+                
+        if  player1wins == 2:
+            print(player1wins,"/",player2wins)
+            winner = True
+        elif player2wins == 2:
+            print(player1wins,"/",player2wins)
+            winner = True
